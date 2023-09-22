@@ -21,6 +21,7 @@ body {
     font-family: "My Chemical Romance";
     letter-spacing: 0.3em;
     line-height: 2rem;
+    text-align: justify;
     background: linear-gradient(var(--black2), var(--black));
     color: var(--white);
     height: 100%;
@@ -186,6 +187,9 @@ section {
 }
 
 @media (max-width: 1215px) {
+    body{ 
+        width: 95%;
+    }
     section {
         display: block;
     }
@@ -206,6 +210,9 @@ section {
     div {
         margin: 0 auto 5% auto;
     }
+    .carousel-slide {
+        margin: 0;
+    }
     .carousel img {
         height: 450px;
     } 
@@ -217,3 +224,20 @@ section {
         max-height: 300px;
     }
 }
+@media (max-width: 545px) {
+    .carousel-container {
+        max-height: 250px;
+        width: fit-content;
+    }
+    .carousel img {
+        height: 250px;
+    } 
+    .photo-text button {
+        max-width: 320px;
+    }
+    
+    .photo-text img {
+        max-height: 240px;
+    }
+}
+
