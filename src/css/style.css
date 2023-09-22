@@ -19,25 +19,33 @@
 
 body {
     font-family: "My Chemical Romance";
-    
     letter-spacing: 0.3em;
     line-height: 2rem;
     background: linear-gradient(var(--black2), var(--black));
     color: var(--white);
     height: 100%;
     width: 85%;
-    position: relative; /* o absolute, o fixed */
+    position: relative;
     left: 50%;
     transform: translate(-50%);
 
+}
+
+header {
+    margin: 5% auto 2% auto;
+}
+
+header h1 {
+    text-align: center;
 }
 
 p {
     text-align: justify;
 }
 
-header {
-    margin: 5% auto 2% auto;
+button {
+    padding: 0;
+    margin: 0;
 }
 
 #title {
@@ -80,13 +88,8 @@ section {
 
 .carousel img {
     height: 450px;
+    transition: height .3s ease;
 } 
-
-@media (max-width: 768px) { 
-    .carousel-container {
-        max-width: 80%;
-    }
-}
 
 .photo-text button {
     display: block;
@@ -104,6 +107,7 @@ section {
     display: block;
     max-height: 300px;
     transition: transform .3s ease;
+    transition: max-height .3s ease;
 }
 
 .photo-text button:hover img {
@@ -126,7 +130,6 @@ section {
     max-width: 700px;
     overflow: hidden;
     box-shadow: 0 0 10px var(--white);
-    padding: 0;
     border: none;
     cursor: zoom-in;
 }
@@ -135,6 +138,7 @@ section {
     display: block;
     max-height: 200px;
     transition: transform .3s ease;
+    transition: max-height .3s ease;
 }
 
 .symbols button:hover img {
@@ -158,4 +162,58 @@ section {
 .player:hover {
     background-color: var(--white);
     color: var(--black2);
+}
+
+.mobile {
+    display: none;
+}
+
+@media (max-width: 1290px) { 
+    .carousel-container {
+        max-height: 300px;
+    }
+    
+    .carousel img {
+        height: 300px;
+    } 
+    .photo-text button {
+        max-width: 300px;
+    }
+    
+    .photo-text img {
+        max-height: 225px;
+    }
+}
+
+@media (max-width: 1215px) {
+    section {
+        display: block;
+    }
+    p {
+        text-align: center;
+    }
+
+    .mobile {
+        display: block;
+    }
+    .desktop {
+        display: none;
+    }
+    .carousel-container {
+        max-height: 450px;
+        width: fit-content;
+    }
+    div {
+        margin: 0 auto 5% auto;
+    }
+    .carousel img {
+        height: 450px;
+    } 
+    .photo-text button {
+        max-width: 400px;
+    }
+    
+    .photo-text img {
+        max-height: 300px;
+    }
 }
